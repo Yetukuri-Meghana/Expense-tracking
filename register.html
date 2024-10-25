@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 50px;
+            transition: transform 0.2s;
+        }
+
+        .main:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+            text-align: center;
+        }
+
+        .box {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        .box:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+        #submit {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        #submit:hover {
+            background-color: #0056b3;
+        }
+
+        .form-field {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-field label {
+            position: absolute;
+            top: -15px;
+            left: 10px;
+            font-size: 14px;
+            color: #777;
+            transition: all 0.3s ease;
+        }
+
+        .box:focus + label, .box:not(:placeholder-shown) + label {
+            top: -25px;
+            left: 10px;
+            font-size: 12px;
+            color: #007bff;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 main">
+                <form action="/event-register" method="POST">
+                    <h2>Registration Form</h2>
+                    
+                    <div class="form-field">
+                        <input type="text" class="box" id="name" name="name" placeholder=" " required/>
+                        <label for="name">Name</label>
+                    </div>
+                    
+                    <div class="form-field">
+                        <input type="text" class="box" id="age" name="age" placeholder=" " required/>
+                        <label for="age">Age</label>
+                    </div>
+                    
+                    <div class="form-field">
+                        <input type="email" class="box" id="email" name="email" placeholder=" " required/>
+                        <label for="email">Email Id</label>
+                    </div>
+                    
+                    <div class="form-field">
+                        <input type="text" class="box" id="phno" name="phno" placeholder=" " required/>
+                        <label for="phno">Mobile</label>
+                    </div>
+                    
+                    <div class="form-field">
+                        <input type="text" class="box" id="gender" name="gender" placeholder=" " required/>
+                        <label for="gender">Gender</label>
+                    </div>
+
+                    <input type="submit" value="Submit" id="submit" />
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</body>
+</html>
